@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tercera Entrega-PF-JS-Larré </title>
+    <!-- fivIcon -->
+    <link rel="icon" type="image/vnd.microsoft.icon" href="img/favIcon-2.ico" sizes="48x48">
+    <!-- css owl carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <!-- font awasome -->
+    <script
+      src="https://kit.fontawesome.com/122bfc9a55.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- mi css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+<!-- Header-Nav -->
+    <header>
+      <div class="header-1">
+        <img class="logo-2" src="img/LOGO-2-.png" alt="" />
+        <div class="form-container">
+          <form action="#">
+            <input type="search" placeholder="Buscar productos" id="search" />
+            <label for="search" class="fas fa-search"></label>
+          </form>
+        </div>
+      </div>
+      <div class="header-2">
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#promociones">Promociones</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="icons">
+          <a>
+            <i class="fas fa-shopping-cart" id="mostrar-carrito">
+              <span id="contadorIcono" class="contador-icono"></span>
+            </i>
+          </a>
+        </div>
+      </div>
+    </header>
+  <!-- inicio section home -->
+    <section class="home" id="home">
+      <div class="home-slider owl owl-carousel">
+        <div class="item">
+           <img src="img/slider-D.jpg" alt="Foto de plato con ensalada" />
+           <div class="cont">
+              <h1>Recetas fabulosas </h1>
+              <p>
+                Deliciosos platos diseñados por los mejores chef con intruciones rapidas y sencillas para cocinar platos fantasticos.
+
+              </p>
+           </div>
+        </div>
+        <div class="item">
+            <img src="img/slider-I.jpg" alt="Foto de plato con ensalada" />
+            <div class="cont">
+                <h2>Poductos frescos</h2>
+                <p>
+                  Los mejores productos e ingredientes todos muy bien empaquetados con los más altos estandares de calidad.
+               </p>
+           </div>
+        </div>
+        <div class="item">
+            <img src="img/slider-E.jpg" alt="Foto de plato con ensalada" />
+            <div class="cont">
+                <h2>Recetas semanales</h2>
+                <p>
+                  Todas las semanas actualizmos nuestro menúes con una gran variedad recetas para todos los gustos.
+               </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/slider-4.jpg" alt="Foto de plato con ensalada" />
+            <div class="cont">
+                <h2>Delivery personalizado</h2>
+                <p>
+                  Vos elegis el día y horario. Nosotros te llevamos los productos directamente a tu puerta sin intermediarios.
+                </p>
+            </div>
+        </div>
+      </div>
+  </section>
+<!-- Fin section home -->
+<!-- Section Nosotros -->
+  <div class="div-titulos">
+    <h2>Nosotros</h2>
+    <span  id="nosotros"></span>
+  </div>
+  <section class="nosotros" >
+      <div class="nos_img" >
+          <img src="/img/nos-2.png" alt="">
+      </div>
+      <div class="nos_contenido">
+          <span>No te preocupes más por el.... qué comemos?</span>
+          <h3>Oishii chef kit de comidas es tu solución</h3>
+          <p>Te ofrecemos diferentes tipos de recetas fáciles y rápidas con todos los productos que necesitas para cocinar y una vez a la semana te lo llevamos a la puerta de tu casa.</p>
+      </div>
+  </section>
+<!--Fin Section Nosotros -->
+<!-- Section Banner -->
+  <section class="banner-contenedor">
+     <div class="banner">
+        <img src="/img/banner-1.jpg" alt="">
+        <div class="banner-contenido">
+           <h3>Ofertas especiales</h3>
+           <p> Arriba de 45% off</p>
+        </div>
+     </div>
+     <div class="banner">
+        <img src="/img/banner-2.jpg" alt="">
+        <div class="banner-contenido">
+            <h3>Promociones especiales</h3>
+            <p> Arriba de 55% off</p>
+        </div>
+     </div>
+  </section>
+<!--Fin Section Banner -->
+<!--Productos/Carrito -->
+  <section class="carrito" id="productos">
+     <div class="div-titulos">
+        <h2 class="titulo-carrito">Productos</h2>
+     </div>
+     <div class="container">
+     <hr />
+      <div class="tabla-carrito">
+       <!-- Tabla carrito -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col " class="columnas">#</th>
+              <th scope="col " class="columnas">Productos</th>
+              <th scope="col " class="columnas">Cantidad</th>
+              <th scope="col " class="columnas">Sumar - Restar</th>
+              <th scope="col " class="columnas">Total</th>
+            </tr>
+          </thead>
+          <tbody id="items" >
+            <!--* aquí html dinamico desde JS -->
+          </tbody>
+          <tfoot>
+            <tr id="footer">
+              <th scope="row" colspan="5">
+                Carrito vacío es momento de comprar!
+              </th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <!-- Fin Tabla carrito -->
+      <div class="row" id="cards">
+        <!--* paintCards() / Pinta los productos aquí dinamicamente -->
+      </div>
+    </div>
+    <!-- templete card-productos -->
+    <template id="template-card">
+      <div class="col-12 mb-2 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="" alt="" class="card-img-top" />
+          <div class="card-body bottonCard">
+            <h5 class="producto-nombre">Titulo</h5>
+            <button
+              class="btn  boton-carrito boton_comprar"
+              id="button"
+            >
+              Comprar
+            </button>
+            <span class="moneda">$</span>
+            <p class="precio"><i class="fas fa-dollar-sign"></i></p>
+          </div>
+        </div>
+      </div>
+    </template>
+    <!-- Template carrito -->
+    <template id="template-carrito">
+      <tr>
+        <th scope="row">id</th>
+        <td>Café</td>
+        <td>1</td>
+        <td>
+          <button class="btn btn-danger btn-sm botonRestar">-</button>
+          <button class="btn btn-sm botonSumar">+</button>
+        </td>
+        <td>$ <span>500</span></td>
+      </tr>
+    </template>
+    <!-- Fin Template carrito -->
+    <!-- template Footer -->
+    <template id="template-footer">
+      <th class="total-carrito" scope="row" colspan="2">Total productos</th>
+      <td class="total-carrito">10</td>
+      <td >
+        <button class="btn btn-danger btn-sm boton-vaciar" id="vaciar-carrito">
+          Vaciar
+        </button>
+        <button
+          class="btn btn-sm boton-vaciar boton-checkOut"
+          id="botonPagar" onclick="mostrarOcultar()">
+          Pagar
+        </button>
+      </td>
+      <td class="total-carrito"> $ <span>5000</span></td>
+    </template>
+    <!--Fin template Footer -->
+  </section>
+<!--Fin Carrito -->
+<!-- Promociones -->
+  <div class="div-titulos">
+    <h2 id="nosotros">Promociones</h2>
+  </div>
+  <section class="promociones" id="promociones">
+    <div class="promociones-contenido">
+       <h3 class="promociones_titulo">Promo de la semana</h3>
+       <p>Suscribite a nuestro newsletter semanal para recibir novedades y participa del sorteo de 6 meses de recetas gratis, apurate que nuestro reloj ya esta en cuanta regresiva!! </p>
+      <div class="count-down">
+         <div class="box">
+            <h3 id="dias">00</h3>
+            <span>Dias</span>
+         </div>
+         <div class="box">
+           <h3 id="horas">00</h3>
+           <span>Horas</span>
+         </div>
+         <div class="box">
+           <h3 id="minutos">00</h3>
+           <span>Minutos</span>
+         </div>
+         <div class="box">
+           <h3 id="segundos">00</h3>
+           <span>Segundos</span>
+         </div>
+      </div>
+      <a href="#" class="btn">Suscribite</a>
+    </div> 
+  </section>
+<!-- Fin Promociones -->
+<!-- Caja check-out-->
+  <section class="check-out" id="check-out">
+    <div id="cerrar">
+       <i class="fas fa-times"></i>
+    </div>
+    <h2 class="titulo-total">
+        TOTAL
+      <span id="precioFinal">
+          <!-- Aquí el precio fianl para check-out dinamico desde JS -->
+      </span>
+    </h2>
+    <form action="#">
+      <h4>Cliente</h4>
+      <div class="input-group1">
+        <div class="input-box1">
+          <input type="text" placeholder="Nombre" required class="name" />
+        </div>
+        <div class="input-box1">
+          <input type="text" placeholder="Apellido" required class="name" />
+        </div>
+      </div>
+      <div class="input-group1">
+        <div class="input-box1">
+          <input type="email" placeholder="Email" required class="name" />
+        </div>
+        <div class="input-box1">
+          <input type="tel" placeholder="Tel.." required class="name" />
+        </div>
+      </div>
+      <div class="input-group2">
+        <div class="input-box2">
+          <h4>Fecha y hora de entrega</h4>
+          <input type="text" placeholder="Dia" class="name2" />
+          <input type="text" placeholder="Mes" class="name2" />
+          <input type="text" placeholder="Horario" class="name2" />
+          <input type="radio" id="b1" name="tiempo" checked class="radio" />
+          <label for="b1">AM</label>
+          <input type="radio" id="b2" name="tiempo" class="radio" />
+          <label for="b2">PM</label>
+        </div>
+      </div>
+      <h4>Medios de pago</h4>
+      <div class="input-group3">
+        <div class="input-box3">
+          <input type="radio" name="pay" id="bc1" checked class="radio" />
+          <label for="bc1">
+            <span>
+              <i class="fa fa-cc-visa " tarjeta></i>
+            </span>
+          </label>
+          <input type="radio" name="pay" id="bc2" class="radio" />
+          <label for="bc2">
+            <span>
+              <i class="fa fa-cc-mastercard" tarjeta></i>
+            </span>
+          </label>
+          <input type="radio" name="pay" id="bc3" class="radio" />
+          <label for="bc3">
+            <span>
+              <i class="fab fa-cc-amex" tarjeta></i>
+            </span>
+          </label>
+        </div>
+      </div>
+      <div class="input-group4">
+        <div class="input-box4">
+          <input type="password" placeholder="Card number" required class="name3"/>
+        </div>
+      </div>
+      <div class="input-group4">
+        <div class="input-box">
+          <input type="password" placeholder="Card CVC" required class="name3"/>
+        </div>
+      </div>
+      <div class="select">
+        <div class="input-box">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Mes</option>
+            <option value="1">01</option>
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Año</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+          </select>
+        </div>
+      </div>
+      <div class="input-boton">
+          <button type="Submit" boton-submit>Pagar</button>
+      </div>
+    </form>
+  </section>
+  <footer id="contacto">
+       <div class="contenido-principal">
+         <div class="caja izq">
+              <h2>Productos orgánicos</h2>
+              <div class="caja_contenido">
+                  <p>Todos nuestros productos son de granjas y productores independientes que con amor y dedicación nos brindas los mejores productos sin pesticidas ni adulteración genética de ningún tipo.
+                  Todos nuestros productos tienen el menor impacto ambiental posible. 
+                  </p>
+                  <div class="social-media">
+                      <a href="#"><span class="fab fa-facebook-f"></span></a>                       
+                      <a href="#"><span class="fab fa-twitter"></span></a>
+                      <a href="#"><span class="fab fa-instagram"></span></a>
+                      <a href="#"><span class="fab fa-youtube"></span></a>
+                  </div>
+              </div>
+         </div>
+         <div class="caja centro">
+              <h2>Dirección</h2>
+              <div class="caja_contenido">
+                  <div class="map_icon">
+                    <span class="fas fa-map-marker-alt"></span>
+                    <span class="icon-text">Buenos Aires, Argentina.</span>
+                  </div>
+                  <div class="tel_icon">
+                      <span class="fas fa-phone-alt"></span>
+                      <span class="icon-text">0-800-10-0000</span>
+                  </div>
+                  <div class="email_icon">
+                      <span class="fas fa-envelope"></span>
+                      <span class="icon-text">oishiichef.info@oishiichef.com</span>
+                  </div>
+               </div>
+          </div>
+          <div class="caja der">
+            <h2 class="contacto_h2">Contacto</h2>
+                <div class="caja_contenido">
+                    <form action="#">
+                      <div class="e-mail">
+                        <div class="icon-text">Email *</div>
+                        <input type="text" required>
+                      </div>
+                      <div class="mensaje">
+                        <div class="icon-text">Mensaje *</div>
+                        <textarea cols="25" rows="2" required></textarea>
+                      </div>
+                      <div class="btn-footer">
+                        <button type="submit">Enviar</button>
+                      </div>
+                    </form>
+                </div>
+          </div>
+      </div>
+      <div class="footer_final">
+         <div style="text-align: center;">
+            <span class="credito">Intento de diseño y desarrollo de Martín Javier Larré - CoderHouse - JS - 2021</span>
+        </div>
+      </div>
+  </footer>
+  
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      ></script>
+    <!-- Pluging Owl Carousel -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      ></script>
+    <!-- js bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- My JS -->
+    <script src="main.js"></script>
+  </body>
+</html>
